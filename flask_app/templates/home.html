@@ -1,0 +1,71 @@
+<!--
+    home.html
+    Template for the homepage
+    Allows user to search through
+    the Google Books API and
+    navigate the website
+-->
+
+{%extends 'layout.html'%}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{%  block content %}
+
+<!-- Search bar-->
+<div class="row" id="center">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <form>
+        <div class="input-group mb-3" id="homeSearch">
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-inline-secondary"><span id=catalogueSelection>Library</span></button>
+                <button type="button" class="btn btn-inline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" onclick="userChoice('Archive')">Archive</a>
+                    <a class="dropdown-item" onclick="userChoice('Library')">Library</a>
+                    <a class="dropdown-item" onclick="userChoice('Museum')">Museum</a>
+                <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" onclick="userChoice('All')">All</a>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="searchBar" placeholder="...">
+            <div class="input-group-append">
+                <button class="btn btn-inline-secondary" id='homeButton' onclick="clickBar()" type="button">Search</button>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="col-sm-3">
+  </div>
+</div>
+
+<script type="text/javascript">
+
+    // search the catalogue
+    function clickBar() {
+        var search = document.getElementById('searchBar').value;
+        console.log(search)
+        console.log(typeof(search))
+        location.href = "{{ url_for('catalogue', searchInput='none') }}".replace("none", search)
+    };
+
+    // Source: https://stackoverflow.com/questions/30073014/bootstrap-input-field-call-function-on-return-keypress-if-field-is-focused
+    $('#searchBar').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            document.getElementById("homeButton").click();
+        }
+    });
+
+    // Edit user choice searchbar
+    function userChoice(choice) {
+        document.getElementById("catalogueSelection").innerHTML = choice;
+    }
+</script>
+{%  endblock content %}

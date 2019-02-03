@@ -1,0 +1,94 @@
+<!--
+    project-user1.html
+    Template for the profile of
+    the user that is 'suggested'
+    to the user in the demo.
+-->
+
+{% extends "layout.html "%}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/account.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
+
+{%  block content %}
+<div class="container-fluid">
+     <div class="col-md-8 question mx-auto" id="faq">
+        <header><h1>Derrick's projects</h1></header>
+        <strong>Email:</strong> <a href = "mailto: derrick.wiley@gmail.com">Send Email</a>
+
+<button type="button" id="createButton" class="btn btn-success">Favorite</button>
+<!-- <button type="button" id="deleteButton" class="btn btn-danger">Remove Project</button>
+ -->
+
+        <section>
+            <ul  id="listUser1">
+                <li>
+                <h5 onclick="toggle_visibility('project1');">The American impact on the West German economy between 1945 - 1975</h5>
+                <p id="project1">
+                <strong>Title:</strong> The American impact on the West German economy between 1945 - 1975.
+                <br></br>
+                <strong>Subject:</strong> History
+                <br></br>
+                <strong>Place:</strong>: Europe -> Germany
+                <br></br>
+                <strong>Time:</strong> 20th century -> 1940 - 1980
+                <br></br>
+                <strong>Topic:</strong> Cold War
+                <br></br>
+                <strong>Tags:</strong>  West-Germany, economy, Marshall Plan, restoration
+                <br></br>
+                <strong>Books:</strong>
+                <br></br>
+                - Berghahn, Volker Rolf,<i>The Americanisation of West German industry, 1945-1973</i> (Cambridge UK; New York, Cambridge University Press, 1986).
+                <br></br>
+                - Bogdanor, Vernon, and Skidelsky, Robert, <i>The age of affluence, 1951-1964</i> (Penguin, 2006).
+                <br></br>
+                - Bogdanor, Vernon, <i>"Postwar: A history of Europe since 1945."</i> (London, Macmillan, 1970).
+                <br></br>
+                - Harrison, Mark, <i>The economics of World War II: six great powers in international comparison</i> (Cambridge, Cambridge University Press, 1998).
+                <br></br>
+                - Judt, Tony. <i>"Postwar: A history of Europe since 1945."</i> Penguin, 2006.
+                <br></br>
+                - Maier, Charles, <i>The Marshall Plan and Germany: West German development within the framework of the European Recovery Program </i> (New York, Berg, 1991).
+                <br></br>
+                - Zimmermann, Hubert. <i>Money and security. Troops, monetary policy and West Germany's relations with the United States and Britain, 1950-1971</i>  (Washington, D.C., German Historical Institute, 2002).
+                <br></br>
+                </p>
+            </li>
+            <li>
+                <h5>The growth of German Banks in Europe</h5>
+            </li>
+            <li>
+                <h5>National Identity in a United Germany: Nationalism or Patriotism? An Empirical Test With Representative Data</h5>
+            </li>
+            <li><h5>
+                The Challenge of German Nationalism 1789–1919</h5>
+            </li>
+
+
+            </ul>
+        </section>
+        <header id='favUsers'><h1>Derrick's Favorite Users</h1></header>
+        <ul id='testUL'>
+            <li>Robby Garrison</li>
+            <li>Briana Raymond</li>
+            <li>Kelvin Higgins</li>
+            <li>Lucas Pacheco</li>
+            <li>Maricela Grant</li>
+            <li>Mattie Khan</li>
+            <li>Katelyn Sanchez</li>
+        </ul>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#createButton").click(function(){
+        $("#form1").toggle();
+    });
+});
+</script>
+{%  endblock content %}

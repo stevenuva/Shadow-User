@@ -1,0 +1,76 @@
+<!--
+    account-project.html
+    Template for the profile of
+    the user after project
+    submitted.
+-->
+{% extends "layout.html "%}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/account.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
+
+{%  block content %}
+<div class="container-fluid">
+     <div class="col-md-8 question mx-auto" id="faq">
+        <header><h1>My projects</h1></header>
+
+<button type="button" id="createButton" class="btn btn-success">New Project</button>
+<button type="button" id="deleteButton" class="btn btn-danger">Remove Project</button>
+
+
+        <section>
+            <ul>
+                <li>
+                <h5 onclick="toggle_visibility('project1');">The impact of the Marshall Plan on the development of the economy of West-Berlin</h5>
+                <p id="project1">
+                <strong>Title:</strong> The impact of the Marshall Plan on the development of the economy of West-Berlin
+                <br></br>
+                <strong>Subject:</strong> History
+                <br></br>
+                <strong>Place:</strong>: Europe -> Germany
+                <br></br>
+                <strong>Time:</strong> 20th century -> 1950 - 1960
+                <br></br>
+                <strong>Topic:</strong> Cold War
+                <br></br>
+                <strong>Tags:</strong>  Berlin, economy,  Konrad Adenauer,  Marshall Plan
+                <br></br>
+                <strong>Books:</strong> Judt, Tony. <i>"Postwar: A history of Europe since 1945."</i> Penguin, 2006.
+
+                </p>
+            </li>
+            <li>
+                <h5>1948: the Creation of Israel</h5>
+            </li>
+
+
+            </ul>
+        </section>
+        <header id='favUsers'><h1>Favorite Users</h1></header>
+          <h5 onclick="toggle_visibility('hiddenUser');">Suggested Users:</h5>
+          <ul id='hiddenUser'>
+            <li>
+                <a style="color: white" href="{{ url_for('projectUser1') }}">Derrick Wiley</a>
+            </li>
+            <li>
+                Marie Bullock
+            </li>
+            <li>
+                Robby Garrison
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#createButton").click(function(){
+        $("#form1").toggle();
+    });
+});
+</script>
+{%  endblock content %}

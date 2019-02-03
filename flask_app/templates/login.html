@@ -1,0 +1,67 @@
+<!--
+    login.html
+    Template to add login function
+-->
+{%  extends "layout.html" %}
+{%  block content %}
+
+<!--  login form -->
+<div class="container h-100">
+    <div class="row align-items-center h-100">
+        <div class="col-8 mx-auto">
+            <div class="jumbotron" id="register">
+                <h2>Log In</h2>
+
+                <form method="Post" action="">
+                  {{ form.hidden_tag() }}
+                  <fieldset class="form-group">
+                   <div class="form-group">
+                    {{ form.username.label(class="form-control-label")}}
+                    {% if form.username.errors  %}
+                      {{ form.username(class="form-control is-invalid")}}
+                      <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                          <span>{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    {% else %}
+                      {{ form.username(class="form-control")}}
+                    {% endif %}
+                  </div>
+
+                  <div class="form-group">
+                    {{ form.password.label(class="form-control-label")}}
+                    {% if form.password.errors  %}
+                      {{ form.password(class="form-control is-invalid")}}
+                      <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                          <span>{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    {% else %}
+                      {{ form.password(class="form-control")}}
+                    {% endif %}
+
+                    <small class="text-muted ml-2">
+                      <a href="https://www.youtube.com/watch?v=48rz8udZBmQ">Forgot Password?</a>
+                  </small>
+                  </div>
+
+                  <div class="form-check">
+                      {{ form.remember(class="form-check-input") }}
+                      {{ form.remember.label(class="form-check-label") }}
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    {{ form.submit(class="btn btn-primary") }}
+                  </div>
+                  <div class="border-top pt-3"><small class="text-white">Not an Account yet?<a class="ml-2" href="/register">Sign Up</a></small></div>
+                  </div>
+                  </fieldset>
+                </form>
+            </div>
+
+    </div>
+</div>
+
+{%  endblock content %}

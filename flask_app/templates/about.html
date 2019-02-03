@@ -1,0 +1,55 @@
+<!--
+    about.html
+    Template with instruction
+    Is useless at the moment
+-->
+
+
+{% extends "layout.html "%}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}
+
+{%  block content %}
+<div class="container-fluid">
+     <div class="col-md-8 question mx-auto" id="faq">
+        <header><h1>FAQ</h1></header>
+        <section class="border-top pt-3">
+            <ul>
+                <li>
+                <h5 onclick="toggle_visibility('faqWhat');">What</h5>
+                <p id="faqWhat">
+                Lefttop ipsum dolor sit amet, hac elementum non, neque magna natoque lectus convallis morbi, mi proin mauris scelerisque facilisi lectus proin, sed diam aliquam sodales quam non. Mollis consequat, commodo elementum ut nunc urna, pulvinar nunc sit interdum tincidunt nec nulla. Id suspendisse quae arcu pellentesque massa in, nec faucibus augue bibendum suspendisse sodales pellentesque. Et sed nam id curabitur pulvinar elit. Pede mauris pretium convallis egestas. Praesent nec venenatis, sociis vestibulum lorem orci laoreet, nec lacus varius velit amet taciti tristique, faucibus sed mollis porta purus ipsum, malesuada nullam non sapien metus.
+                </p>
+            </li>
+            <li>
+                <h5 onclick="toggle_visibility('faqWho');">Who</h5>
+                <p id="faqWho">
+                Lefttop ipsum dolor sit amet, hac elementum non, neque magna natoque lectus convallis morbi, mi proin mauris scelerisque facilisi lectus proin, sed diam aliquam sodales quam non. Mollis consequat, commodo elementum ut nunc urna, pulvinar nunc sit interdum tincidunt nec nulla. Id suspendisse quae arcu pellentesque massa in, nec faucibus augue bibendum suspendisse sodales pellentesque. Et sed nam id curabitur pulvinar elit. Pede mauris pretium convallis egestas. Praesent nec venenatis, sociis vestibulum lorem orci laoreet, nec lacus varius velit amet taciti tristique, faucibus sed mollis porta purus ipsum, malesuada nullam non sapien metus.
+                </p>
+            </li>
+            <li>
+                <h5 onclick="toggle_visibility('faqWhy');">Why</h5>
+                <p id="faqWhy">
+                Lefttop ipsum dolor sit amet, hac elementum non, neque magna natoque lectus convallis morbi, mi proin mauris scelerisque facilisi lectus proin, sed diam aliquam sodales quam non. Mollis consequat, commodo elementum ut nunc urna, pulvinar nunc sit interdum tincidunt nec nulla. Id suspendisse quae arcu pellentesque massa in, nec faucibus augue bibendum suspendisse sodales pellentesque. Et sed nam id curabitur pulvinar elit. Pede mauris pretium convallis egestas. Praesent nec venenatis, sociis vestibulum lorem orci laoreet, nec lacus varius velit amet taciti tristique, faucibus sed mollis porta purus ipsum, malesuada nullam non sapien metus.
+                </p>
+            </li>
+            <li>
+                <h5 onclick="toggle_visibility('faqHow');">How</h5>
+                <p id="faqHow">
+                Lefttop ipsum dolor sit amet, hac elementum non, neque magna natoque lectus convallis morbi, mi proin mauris scelerisque facilisi lectus proin, sed diam aliquam sodales quam non. Mollis consequat, commodo elementum ut nunc urna, pulvinar nunc sit interdum tincidunt nec nulla. Id suspendisse quae arcu pellentesque massa in, nec faucibus augue bibendum suspendisse sodales pellentesque. Et sed nam id curabitur pulvinar elit. Pede mauris pretium convallis egestas. Praesent nec venenatis, sociis vestibulum lorem orci laoreet, nec lacus varius velit amet taciti tristique, faucibus sed mollis porta purus ipsum, malesuada nullam non sapien metus.
+                </p>
+            </li>
+            <li>
+                <h5 onclick="toggle_visibility('faqGoal');">Goal</h5>
+                <p id="faqGoal">
+                Lefttop ipsum dolor sit amet, hac elementum non, neque magna natoque lectus convallis morbi, mi proin mauris scelerisque facilisi lectus proin, sed diam aliquam sodales quam non. Mollis consequat, commodo elementum ut nunc urna, pulvinar nunc sit interdum tincidunt nec nulla. Id suspendisse quae arcu pellentesque massa in, nec faucibus augue bibendum suspendisse sodales pellentesque. Et sed nam id curabitur pulvinar elit. Pede mauris pretium convallis egestas. Praesent nec venenatis, sociis vestibulum lorem orci laoreet, nec lacus varius velit amet taciti tristique, faucibus sed mollis porta purus ipsum, malesuada nullam non sapien metus.
+                </p>
+            </li>
+            </ul>
+        </section>
+    </div>
+</div>
+{%  endblock content %}
