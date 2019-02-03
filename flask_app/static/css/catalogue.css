@@ -1,0 +1,65 @@
+
+header {
+    border-bottom: solid 3px white;
+}
+
+h2 {
+    border-bottom: solid 3px rgb(85,52,42);
+}
+
+section p{
+    border-top: solid 1px white;
+    display: none;
+}
+
+ul {
+    list-style: square;
+}
+
+.btn-inline-secondary {
+    background-color: rgb(42,76,87);
+    color: white;
+    border: none;
+}
+
+.btn-inline-success{
+    border: solid 2px white;
+    background-color: rgba(42,76,87,0.2);
+    color: white;
+}
+
+.catalogueItems {
+    text-align: justify;
+    background: rgb(254,230,206);
+    color: black;
+    overflow:hidden
+}
+
+.catalogueItems img {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 5px;
+}
+
+.catalogueItems p,ul,li {
+    margin-left: 1em;
+}
+
+
+.generatedUsersList{
+    padding-left: 130px;
+    padding-right: 10px;
+}
+
+.textCatalogue {
+    padding-left: 130px;
+    padding-right: 10px;
+}
+
+#catalogue {
+    text-align: justify;
+    background: rgba(85,52,42,0.8) fixed;
+    height: 100%;
+    min-height: 100vh;
+    color: white;
+}

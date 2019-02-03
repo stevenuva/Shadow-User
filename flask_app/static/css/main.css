@@ -1,0 +1,23 @@
+/*
+* main.css
+* Stylesheet for the whole application
+* Navbar and background
+*/
+
+html, body {
+    background: url(../images/background.jpg) fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-width: 200px;
+}
+
+.navbar-expand-md{
+    background-color: rgba(42,76,87, 0.8) !important;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+    font-size: 1.2em;
+}

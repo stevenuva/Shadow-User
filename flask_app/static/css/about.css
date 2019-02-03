@@ -1,0 +1,28 @@
+/*
+* about.css
+* Stylesheet for about.html
+*/
+
+header {
+    border-bottom: solid 3px white;
+}
+
+section p{
+    border-top: solid 1px white;
+    display: none;
+}
+
+ul{
+    list-style: square;
+}
+
+.question {
+    color: white;
+}
+
+#faq {
+    text-align: justify;
+    background: rgba(85,52,42,0.8) fixed;
+    height: 100%;
+    min-height: 100vh;
+}

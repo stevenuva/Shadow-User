@@ -1,0 +1,125 @@
+/*
+* accout.css
+* Stylesheet for the account page
+*/
+
+#faq {
+    text-align: justify;
+    background: rgba(85,52,42,0.8) fixed;
+    height: 100%;
+    min-height: 100vh;
+}
+
+#catalogue {
+    text-align: justify;
+    background: rgba(85,52,42,0.8) fixed;
+    height: 100%;
+    min-height: 100vh;
+}
+
+#listUser1 li{
+  margin-bottom: 1em;
+}
+
+#user1List {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+#user1List li {
+    margin-bottom: 1em;
+    font-weight: bolder;
+}
+
+.question {
+    color: white;
+}
+
+.generatedUsersList{
+    padding-left: 130px;
+    padding-right: 10px;
+}
+
+.textCatalogue {
+    padding-left: 130px;
+    padding-right: 10px;
+}
+
+header {
+    border-bottom: solid 3px white;
+}
+
+
+section p{
+    border-top: solid 1px white;
+    display: none;
+}
+
+h2 {
+    border-bottom: solid 3px rgb(85,52,42);
+}
+
+ul{
+    list-style: square;
+}
+
+#favUsers {
+    margin-top: 30%;
+}
+
+
+#form1{
+  background-color: rgb(254,230,206);
+  padding:10px;
+  border:2px solid white;
+  display:none;
+  border-radius:15px;
+  color: black;
+
+}
+
+#projectTitle{
+  width: 650px;
+}
+
+#submit{
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#submit:hover{
+  background: green;
+  text-decoration: none;
+}
+
+#createButton {
+  position: relative;
+  top: -3em;
+  left: 70%;
+}
+
+#deleteButton {
+  position: relative;
+  top: -3em;
+  left: 71%;
+}
+#tagsExtra {
+  width: 300px;
+}
+
+#project1 {
+  background-color: rgb(254,230,206);
+  padding:10px;
+  border:2px solid white;
+  border-radius:15px;
+  color: black;
+}
+
+#hiddenUser {
+display: none;
+}

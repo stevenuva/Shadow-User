@@ -1,0 +1,24 @@
+/*
+* home.css
+* Stylesheet for the homepage
+*/
+
+.btn-inline-secondary {
+    background-color: rgb(42,76,87);
+    color: white;
+    border: none;
+}
+
+.btn-inline-success{
+    border: solid 2px white;
+    background-color: rgba(42,76,87,0.2);
+    color: white;
+}
+
+
+
+#homeSearch {
+    margin-top: 33vh;
+    min-width: 400px;
+}
+

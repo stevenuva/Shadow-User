@@ -1,0 +1,19 @@
+/*
+* login.css
+* Stylesheet for the login page
+*/
+
+html, body {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-width: 200px;
+}
+
+#register {
+    color: white;
+    background-color: rgba(42,76,87, 0.8);
+    padding: 1.5em;
+}
